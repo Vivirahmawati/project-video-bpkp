@@ -1,0 +1,1305 @@
+
+/* ==========================================
+   PROJECT VIDEO BPKP - STYLE.CSS
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #192747;
+  background: #f5f7ff;
+  line-height: 1.5;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.page-shell {
+  min-height: 100vh;
+  overflow: clip;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.site-header {
+  width: min(1200px, calc(100% - 40px));
+  min-height: 76px;
+  margin: 18px auto 0;
+  padding: 12px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  background: white;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 30px rgba(48, 45, 120, 0.06);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  color: #252668;
+}
+
+.brand img {
+  width: 78px;
+  height: 49px;
+  object-fit: contain;
+}
+
+.brand-fallback {
+  font-size: 20px;
+  font-weight: 800;
+  color: #344fa5;
+}
+
+.brand-separator {
+  width: 1px;
+  height: 38px;
+  background: #dedcf2;
+}
+
+.brand strong {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  color: #5c5f85;
+  font-size: 13px;
+  font-weight: 600;
+
+  padding: 10px 17px;
+  border-radius: 12px;
+  transition: 0.2s ease;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background: #efedff;
+  color: #5147bb;
+}
+
+/* ==========================================
+   HERO BANNER
+========================================== */
+
+.hero {
+  position: relative;
+
+  width: min(1200px, calc(100% - 40px));
+  min-height: 315px;
+
+  margin: 4px auto 0;
+  padding: 43px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  overflow: hidden;
+  border-radius: 17px;
+
+  background: linear-gradient(
+    112deg,
+    #29368f 0%,
+    #4334aa 45%,
+    #6653d7 72%,
+    #9bc8ff 100%
+  );
+
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 370px;
+  height: 370px;
+  top: -180px;
+  right: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  bottom: -265px;
+  left: 28%;
+  border-radius: 50%;
+  background: rgba(207, 203, 255, 0.11);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  flex: 1 1 60%;
+  min-width: 0;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 14px;
+  color: #d0c9ff;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  max-width: 630px;
+  margin-bottom: 13px;
+
+  font-size: clamp(28px, 3.2vw, 43px);
+  font-weight: 800;
+  line-height: 1.13;
+  letter-spacing: -0.8px;
+}
+
+.hero-description {
+  max-width: 540px;
+
+  color: #e4e5ff;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   ILUSTRASI HERO
+========================================== */
+
+.hero-illustration {
+  position: relative;
+  z-index: 1;
+
+  flex: 0 0 345px;
+  width: 345px;
+  height: 235px;
+}
+
+.laptop {
+  position: absolute;
+  width: 265px;
+  left: 22px;
+  top: 65px;
+
+  transform: rotate(-5deg);
+  filter: drop-shadow(0 13px 16px rgba(17, 15, 80, 0.22));
+}
+
+.laptop-screen {
+  height: 149px;
+  background: #272d78;
+
+  border: 9px solid #dce1ff;
+  border-radius: 12px 12px 5px 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.play-large {
+  display: grid;
+  place-items: center;
+
+  width: 54px;
+  height: 54px;
+
+  background: linear-gradient(135deg, #8e7cf2, #5a49bc);
+  border-radius: 50%;
+
+  font-size: 20px;
+  color: white;
+}
+
+.fake-progress {
+  width: 75%;
+  height: 5px;
+  background: #5b629a;
+  border-radius: 20px;
+}
+
+.fake-progress::before {
+  content: "";
+  display: block;
+  width: 45%;
+  height: 100%;
+  background: #b3a3ff;
+  border-radius: inherit;
+}
+
+.laptop-base {
+  width: 295px;
+  height: 12px;
+  margin-left: -15px;
+  background: linear-gradient(#e3e8ff, #a6b5e5);
+  border-radius: 4px 4px 15px 15px;
+}
+
+.floating-panel {
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  z-index: 2;
+
+  width: 105px;
+  height: 90px;
+  padding: 12px;
+
+  color: #6152c8;
+  background: #f4f2ff;
+
+  border-radius: 12px;
+  transform: rotate(8deg);
+
+  box-shadow: 0 10px 25px rgba(22, 18, 85, 0.12);
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  height: 35px;
+  gap: 7px;
+  margin-top: 5px;
+}
+
+.bars i {
+  width: 13px;
+  border-radius: 4px 4px 0 0;
+  background: #8879e9;
+}
+
+.bars i:nth-child(1) {
+  height: 15px;
+}
+
+.bars i:nth-child(2) {
+  height: 24px;
+}
+
+.bars i:nth-child(3) {
+  height: 19px;
+}
+
+.bars i:nth-child(4) {
+  height: 34px;
+}
+
+.book-stack {
+  position: absolute;
+  right: 1px;
+  bottom: 3px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  transform: rotate(-7deg);
+}
+
+.book-stack span {
+  display: block;
+  padding: 6px 13px;
+
+  background: #536dd0;
+  color: white;
+  border-radius: 5px;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+
+  box-shadow: 0 4px 9px rgba(19, 17, 77, 0.15);
+}
+
+.book-stack span:nth-child(1) {
+  background: #e59b83;
+}
+
+.book-stack span:nth-child(2) {
+  background: #8270df;
+}
+
+.sparkle {
+  position: absolute;
+  color: #f8e8ae;
+  font-size: 24px;
+}
+
+.sparkle-one {
+  top: 15px;
+  left: 10px;
+}
+
+.sparkle-two {
+  bottom: 14px;
+  left: 0;
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: -42px;
+  left: -5%;
+
+  width: 110%;
+  height: 60px;
+
+  background: rgba(187, 194, 255, 0.15);
+  border-radius: 50% 50% 0 0;
+}
+
+/* ==========================================
+   DAFTAR VIDEO
+========================================== */
+
+.content-panel {
+  width: min(1160px, calc(100% - 60px));
+  margin: 30px auto 65px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.heading-icon {
+  display: grid;
+  place-items: center;
+
+  width: 51px;
+  height: 51px;
+
+  background: #e9e6ff;
+  color: #6350c9;
+
+  border-radius: 14px;
+  font-size: 21px;
+}
+
+.section-heading h2 {
+  color: #172750;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.section-heading p {
+  margin-top: 3px;
+  color: #8187a2;
+  font-size: 13px;
+}
+
+/* ==========================================
+   PENCARIAN
+========================================== */
+
+.search-field {
+  width: 315px;
+  min-height: 43px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 15px;
+
+  background: white;
+  border: 1px solid #dedff0;
+  border-radius: 25px;
+
+  box-shadow: 0 4px 15px rgba(66, 53, 148, 0.05);
+  transition: 0.2s;
+}
+
+.search-field:focus-within {
+  border-color: #7865db;
+  box-shadow: 0 0 0 4px rgba(113, 92, 220, 0.1);
+}
+
+.search-field svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: #68749c;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+#searchInput {
+  flex: 1;
+  min-width: 0;
+
+  padding: 11px 0;
+  border: none;
+  outline: none;
+
+  background: transparent;
+  color: #26335c;
+  font-size: 13px;
+}
+
+#searchInput::placeholder {
+  color: #9a9fb5;
+}
+
+.video-counter {
+  margin-bottom: 15px;
+  color: #8790a8;
+  font-size: 12px;
+}
+
+/* ==========================================
+   GRID VIDEO - 2 KOLOM
+========================================== */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.video-card {
+  min-width: 0;
+  background: #fff;
+
+  border: 1px solid #e7e9f5;
+  border-radius: 15px;
+  overflow: hidden;
+
+  box-shadow: 0 5px 20px rgba(35, 35, 110, 0.055);
+  transition: 0.25s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 27px rgba(35, 35, 110, 0.11);
+}
+
+/* ==========================================
+   THUMBNAIL VIDEO
+========================================== */
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 190px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    125deg,
+    #343d94 0%,
+    #6050b9 55%,
+    #8e7ee2 100%
+  );
+
+  overflow: hidden;
+}
+
+.video-thumbnail::before {
+  content: "";
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+  right: -100px;
+  top: -110px;
+
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+}
+
+.video-thumbnail::after {
+  content: "";
+  position: absolute;
+
+  width: 160px;
+  height: 160px;
+  left: -85px;
+  bottom: -110px;
+
+  border: 2px solid rgba(255, 255, 255, 0.09);
+  border-radius: 50%;
+}
+
+/* Judul thumbnail */
+
+.thumbnail-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 20px 70px;
+  text-align: center;
+  color: white;
+}
+
+.thumbnail-content h3 {
+  max-width: 390px;
+  margin: 0 auto;
+
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+/* Hapus tulisan tambahan dan simbol Play lama */
+
+.thumbnail-label,
+.thumbnail-symbol,
+.thumbnail-number {
+  display: none !important;
+}
+
+/* SATU TOMBOL PLAY DI TENGAH */
+
+.thumbnail-play {
+  position: absolute;
+  z-index: 5;
+
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+
+  transform: translate(-50%, -50%);
+
+  display: grid;
+  place-items: center;
+
+  width: 58px;
+  height: 58px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.95);
+  color: #6251c6;
+  font-size: 22px;
+
+  box-shadow: 0 7px 23px rgba(23, 20, 94, 0.23);
+  transition: 0.2s ease;
+}
+
+.thumbnail-play:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: #fff;
+}
+
+/* Jangan tampilkan judul di belakang tombol play */
+
+.thumbnail-content {
+  display: none;
+}
+
+/* ==========================================
+   INFORMASI DI BAWAH THUMBNAIL
+========================================== */
+
+.video-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 15px 17px;
+}
+
+.video-details {
+  min-width: 0;
+  flex: 1;
+}
+
+/* Hilangkan VIDEO PEMBELAJARAN */
+
+.video-category {
+  display: none !important;
+}
+
+.video-info h3 {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 750;
+  color: #22345d;
+}
+
+.video-meta {
+  margin-top: 5px;
+  color: #9097ad;
+  font-size: 11px;
+}
+
+/* Tidak ada tombol Tonton kedua */
+
+.watch-button {
+  display: none !important;
+}
+
+/* ==========================================
+   EMPTY SEARCH
+========================================== */
+
+.empty-message {
+  text-align: center;
+  padding: 45px 20px;
+  font-size: 14px;
+  color: #7e86a3;
+}
+
+/* ==========================================
+   MODAL PLAYER GOOGLE DRIVE
+========================================== */
+
+.video-modal {
+  position: fixed;
+  margin: auto;
+
+  width: min(900px, calc(100% - 30px));
+  max-width: none;
+  max-height: calc(100dvh - 35px);
+
+  padding: 0;
+  border: none;
+  border-radius: 17px;
+
+  background: white;
+  color: #263052;
+
+  overflow: auto;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
+}
+
+.video-modal::backdrop {
+  background: rgba(12, 13, 48, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+.modal-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 17px 20px;
+}
+
+.modal-top h2 {
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.close-button {
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+  place-items: center;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #f1effb;
+  color: #555080;
+  font-size: 27px;
+}
+
+.close-button:hover {
+  background: #e5e0ff;
+}
+
+.modal-player {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #111827;
+}
+
+.modal-player iframe {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.modal-note {
+  padding: 14px 20px 18px;
+  color: #9095a9;
+  font-size: 12px;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+  padding: 30px 20px;
+  background: #27275c;
+  color: white;
+  text-align: center;
+}
+
+footer strong {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+footer p {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #c8cae3;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+  .hero {
+    padding: 35px 30px;
+  }
+
+  .hero-illustration {
+    flex-basis: 290px;
+    transform: scale(0.8);
+    transform-origin: center;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .video-thumbnail {
+    height: 165px;
+  }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+  .site-header {
+    width: calc(100% - 24px);
+    padding: 12px 15px;
+    margin-top: 12px;
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand img {
+    width: 55px;
+    height: 39px;
+  }
+
+  .brand strong {
+    font-size: 15px;
+  }
+
+  .brand-separator {
+    height: 27px;
+  }
+
+  .nav-link {
+    padding: 8px 11px;
+    font-size: 12px;
+  }
+
+  .hero {
+    width: calc(100% - 24px);
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 36px 25px 22px;
+    gap: 0;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .hero-illustration {
+    align-self: center;
+    transform: scale(0.8);
+    margin: -10px 0 -25px;
+  }
+
+  .content-panel {
+    width: calc(100% - 28px);
+    margin-top: 30px;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .search-field {
+    width: 100%;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .video-thumbnail {
+    height: 190px;
+  }
+
+  .video-info h3 {
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .brand strong {
+    font-size: 13px;
+  }
+
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero h1 {
+    font-size: 27px;
+  }
+
+  .hero-illustration {
+    transform: scale(0.7);
+    margin: -25px 0 -45px;
+  }
+
+  .section-heading h2 {
+    font-size: 22px;
+  }
+
+  .video-thumbnail {
+    height: 160px;
+  }
+
+  .modal-top h2 {
+    font-size: 15px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================
+   REVISI TAMPILAN SEARCH BAR
+   PROJECT VIDEO BPKP
+========================================== */
+
+/* Hilangkan navigasi Beranda */
+.site-nav {
+  display: none !important;
+}
+
+/* Area daftar video */
+.content-panel {
+  width: min(1160px, calc(100% - 60px));
+  margin: 38px auto 65px;
+}
+
+/* Search bar di tengah */
+.search-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+/* Perbesar kotak pencarian */
+.search-section .search-field {
+  width: min(680px, 100%);
+  min-height: 62px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 0 25px;
+
+  background: #ffffff;
+  border: 1px solid #dedff2;
+  border-radius: 35px;
+
+  box-shadow: 0 8px 25px rgba(67, 55, 145, 0.09);
+
+  transition: all 0.25s ease;
+}
+
+/* Efek saat pencarian diklik */
+.search-section .search-field:focus-within {
+  border-color: #7161dc;
+
+  box-shadow:
+    0 0 0 4px rgba(113, 97, 220, 0.10),
+    0 10px 30px rgba(67, 55, 145, 0.10);
+}
+
+/* Ikon kaca pembesar */
+.search-section .search-field svg {
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+
+  stroke: #6659bd;
+  stroke-width: 2;
+}
+
+/* Input pencarian */
+.search-section #searchInput {
+  width: 100%;
+  flex: 1;
+  min-width: 0;
+
+  padding: 16px 0;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  font-size: 16px;
+  color: #26345d;
+}
+
+.search-section #searchInput::placeholder {
+  color: #9ca0b8;
+}
+
+/* Jumlah video tetap ditampilkan */
+.video-counter {
+  margin-bottom: 18px;
+  font-size: 12px;
+  color: #8a91ad;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 700px) {
+
+  .content-panel {
+    width: calc(100% - 28px);
+    margin-top: 25px;
+  }
+
+  .search-section .search-field {
+    width: 100%;
+    min-height: 55px;
+    padding: 0 18px;
+  }
+
+  .search-section #searchInput {
+    font-size: 13px;
+  }
+
+  .search-section .search-field svg {
+    width: 20px;
+    height: 20px;
+  }
+
+}
+
+/* ==========================================
+   PERBAIKAN LAYOUT PROJECT VIDEO BPKP
+   Tempel di PALING BAWAH style.css
+========================================== */
+
+/* Pastikan semua bagian tersusun vertikal */
+body {
+  display: block !important;
+  margin: 0;
+  min-width: 320px;
+  background: #f5f7ff;
+}
+
+.page-shell {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  min-height: 100vh;
+  overflow: clip;
+}
+
+/* Header kembali ke bagian atas */
+.site-header {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+
+  width: min(1200px, calc(100% - 40px)) !important;
+  margin: 18px auto 0 !important;
+  flex-shrink: 0;
+}
+
+/* Hapus navigasi Beranda */
+.site-nav {
+  display: none !important;
+}
+
+/* Banner penuh secara horizontal */
+.hero {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  width: min(1200px, calc(100% - 40px)) !important;
+  max-width: 1200px !important;
+  min-height: 315px;
+  height: auto;
+
+  margin: 4px auto 0 !important;
+  padding: 40px !important;
+
+  flex: none !important;
+}
+
+.hero-content {
+  width: auto !important;
+  max-width: 630px !important;
+  min-width: 0 !important;
+  flex: 1 1 55% !important;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 3.2vw, 43px);
+  line-height: 1.15;
+  overflow-wrap: normal;
+}
+
+.hero-description {
+  max-width: 530px;
+  font-size: 14px;
+}
+
+.hero-illustration {
+  position: relative;
+  flex: 0 0 345px !important;
+  width: 345px !important;
+  height: 235px !important;
+}
+
+/* Konten berada DI BAWAH banner */
+.content-panel {
+  display: block !important;
+  flex: none !important;
+
+  width: min(1160px, calc(100% - 60px)) !important;
+  max-width: 1160px !important;
+
+  margin: 35px auto 65px !important;
+  padding: 0 !important;
+}
+
+/* Search bar di tengah */
+.search-section {
+  display: flex !important;
+  width: 100%;
+  justify-content: center !important;
+  align-items: center;
+  margin: 0 0 25px !important;
+}
+
+.search-section .search-field {
+  width: min(680px, 100%) !important;
+  min-height: 62px;
+}
+
+/* Video tetap dua kolom */
+.video-grid {
+  display: grid !important;
+  width: 100% !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+}
+
+.video-card {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+.video-thumbnail {
+  height: 190px;
+}
+
+/* Footer selalu berada setelah video */
+footer {
+  display: block !important;
+  position: static !important;
+  float: none !important;
+
+  width: 100% !important;
+  margin: auto 0 0 !important;
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 30px !important;
+  }
+
+  .hero-illustration {
+    flex-basis: 280px !important;
+    transform: scale(0.8);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 30px 22px !important;
+  }
+
+  .hero-content {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .hero-illustration {
+    align-self: center;
+    flex: none !important;
+    transform: scale(0.75);
+    margin: -15px 0 -35px;
+  }
+
+  .content-panel {
+    width: calc(100% - 28px) !important;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .search-section .search-field {
+    width: 100% !important;
+  }
+}
+
+/* PERBAIKAN UKURAN THUMBNAIL VIDEO */
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  overflow: hidden;
+  background: #f1f3f9;
+}
+
+.video-thumbnail .thumbnail-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.video-thumbnail .thumbnail-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}

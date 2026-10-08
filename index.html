@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Project Video ABK | BPKP</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <div class="page-shell">
+
+    
+<!-- HEADER -->
+<header class="site-header" id="beranda">
+
+  <a class="brand" href="#beranda">
+
+    <img
+      src="assets/logo.png"
+      alt="Logo BPKP"
+      onerror="this.hidden=true;this.nextElementSibling.hidden=false"
+    >
+
+    <span class="brand-fallback" hidden>BPKP</span>
+
+    <span class="brand-separator"></span>
+
+    <strong>PROJECT VIDEO</strong>
+
+  </a>
+
+</header>
+
+
+    <!-- HERO BANNER -->
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <p class="eyebrow">
+          PROJECT VIDEO
+          <span aria-hidden="true">────</span>
+        </p>
+
+        <h1>
+          Video Perhitungan Analisis Beban Kerja
+        </h1>
+
+        <p class="hero-description">
+          Kumpulan video perhitungan Analisis Beban Kerja
+          (ABK) untuk berbagai jabatan di lingkungan BPKP.
+        </p>
+
+      </div>
+
+
+      <!-- ILUSTRASI -->
+      <div class="hero-illustration" aria-hidden="true">
+
+        <div class="floating-panel">
+          <span>▥</span>
+
+          <span class="bars">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+        </div>
+
+        <div class="laptop">
+
+          <div class="laptop-screen">
+
+            <span class="play-large">▶</span>
+
+            <div class="fake-progress"></div>
+
+          </div>
+
+          <div class="laptop-base"></div>
+
+        </div>
+
+        <div class="book-stack">
+          <span>ANALISIS</span>
+          <span>BEBAN KERJA</span>
+          <span>JABATAN</span>
+        </div>
+
+        <div class="sparkle sparkle-one">✦</div>
+        <div class="sparkle sparkle-two">✧</div>
+
+      </div>
+
+      <div class="hero-wave" aria-hidden="true"></div>
+
+    </section>
+
+
+        
+<!-- AREA VIDEO -->
+<main class="content-panel" id="daftar-video">
+
+  <!-- SEARCH BAR TENGAH -->
+  <section class="search-section">
+
+    <label class="search-field">
+
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+
+        <circle
+          cx="10.8"
+          cy="10.8"
+          r="6.6">
+        </circle>
+
+        <path d="m16 16 5 5"></path>
+
+      </svg>
+
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Cari video berdasarkan nama jabatan..."
+        aria-label="Cari video"
+        autocomplete="off"
+      >
+
+    </label>
+
+  </section>
+
+
+  <!-- JUMLAH VIDEO -->
+  <p
+    class="video-counter"
+    id="videoCounter"
+    aria-live="polite">
+  </p>
+
+
+  <!-- DAFTAR KARTU VIDEO -->
+  <section
+    class="video-grid"
+    id="videoGrid"
+    aria-label="Kumpulan video">
+  </section>
+
+
+  <!-- JIKA VIDEO TIDAK DITEMUKAN -->
+  <p
+    class="empty-message"
+    id="emptyMessage"
+    hidden>
+
+    Video tidak ditemukan.
+    Silakan coba kata kunci lain.
+
+  </p>
+
+</main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+      <strong>PROJECT VIDEO BPKP</strong>
+
+      <p>
+        Media pembelajaran perhitungan Analisis Beban Kerja
+        untuk berbagai jabatan.
+      </p>
+
+    </footer>
+
+  </div>
+
+
+  <!-- POPUP PEMUTAR VIDEO -->
+  <dialog
+    class="video-modal"
+    id="videoModal"
+    aria-labelledby="modalTitle">
+
+    <div class="modal-top">
+
+      <h2 id="modalTitle">Video</h2>
+
+      <button
+        type="button"
+        class="close-button"
+        id="closeModal"
+        aria-label="Tutup video">
+        ×
+      </button>
+
+    </div>
+
+
+    <div
+      class="modal-player"
+      id="modalPlayer">
+    </div>
+
+    <p class="modal-note">
+      Jika video tidak dapat diputar,
+      periksa izin akses Google Drive.
+    </p>
+
+  </dialog>
+
+</body>
+</html>
