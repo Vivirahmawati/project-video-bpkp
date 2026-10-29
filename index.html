@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 
@@ -12,34 +11,144 @@
   <script src="script.js" defer></script>
 </head>
 
+<dialog class="about-modal" id="aboutModal">
+
+  <div class="about-modal-header">
+
+    <div>
+      <span class="about-label">PROJECT VIDEO</span>
+      <h2>Tentang Project Video BPKP</h2>
+    </div>
+
+    <button
+      type="button"
+      class="close-button"
+      id="closeAboutModal"
+      aria-label="Tutup"
+    >
+      ×
+    </button>
+
+  </div>
+
+
+  <div class="about-modal-content">
+
+    <div class="about-logo">
+      <img
+        src="assets/logo.png"
+        alt="Logo BPKP"
+      >
+    </div>
+
+
+    <p class="about-description">
+      Project Video BPKP merupakan media pembelajaran
+      yang menyediakan kumpulan video dan flyer mengenai
+      Perhitungan Analisis Beban Kerja (ABK) dan
+      Analisis Jabatan untuk berbagai jabatan
+      di lingkungan BPKP.
+    </p>
+
+
+    <p class="about-description">
+      Website ini dirancang agar pengguna dapat
+      mempelajari materi secara lebih ringkas,
+      visual, terstruktur, dan mudah diakses.
+    </p>
+
+
+    <div class="about-features">
+
+      <div class="about-feature">
+        <span>▶</span>
+
+        <div>
+          <strong>Video Pembelajaran</strong>
+          <p>
+            Materi perhitungan ABK berdasarkan jabatan.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="about-feature">
+        <span>▤</span>
+
+        <div>
+          <strong>Flyer &amp; Infografis</strong>
+          <p>
+            Ringkasan materi dalam bentuk visual.
+          </p>
+        </div>
+      </div>
+
+</dialog>
+
 <body>
 
   <div class="page-shell">
 
-    
-<!-- HEADER -->
-<header class="site-header" id="beranda">
 
-  <a class="brand" href="#beranda">
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="site-header" id="beranda">
 
-    <img
-      src="assets/logo.png"
-      alt="Logo BPKP"
-      onerror="this.hidden=true;this.nextElementSibling.hidden=false"
-    >
+      <a class="brand" href="#beranda">
 
-    <span class="brand-fallback" hidden>BPKP</span>
+        <img
+          src="assets/logo.png"
+          alt="Logo BPKP"
+          onerror="this.hidden=true;this.nextElementSibling.hidden=false"
+        >
 
-    <span class="brand-separator"></span>
+        <span class="brand-fallback" hidden>BPKP</span>
 
-    <strong>PROJECT VIDEO</strong>
+        <span class="brand-separator"></span>
 
-  </a>
+        <strong>PROJECT VIDEO</strong>
 
-</header>
+      </a>
 
 
-    <!-- HERO BANNER -->
+      <!-- NAVIGATION -->
+      <nav class="main-nav" aria-label="Navigasi utama">
+
+        <a href="#beranda" class="nav-link active">
+          <span class="nav-icon">⌂</span>
+          Beranda
+        </a>
+
+        <a href="#daftar-video" class="nav-link">
+          <span class="nav-icon">▶</span>
+          Video
+        </a>
+
+        <a href="#infografis" class="nav-link">
+          <span class="nav-icon">▤</span>
+          Infografis
+        </a>
+
+        <button
+        type="button"
+        class="nav-link about-button"
+        id="openAboutModal"
+        >
+  <span class="nav-icon">ⓘ</span>
+  Tentang
+</button>
+        </a>
+
+      </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO BANNER
+    ========================== -->
     <section class="hero">
 
       <div class="hero-content">
@@ -50,12 +159,12 @@
         </p>
 
         <h1>
-          Video Perhitungan Analisis Beban Kerja
+          Perhitungan ABK dan Analisis Jabatan
         </h1>
 
         <p class="hero-description">
-          Kumpulan video perhitungan Analisis Beban Kerja
-          (ABK) untuk berbagai jabatan di lingkungan BPKP.
+          Kumpulan video dan flyers perhitungan Analisis Beban Kerja
+          (ABK) dan Analisis Jabatan untuk berbagai jabatan di lingkungan BPKP.
         </p>
 
       </div>
@@ -65,6 +174,7 @@
       <div class="hero-illustration" aria-hidden="true">
 
         <div class="floating-panel">
+
           <span>▥</span>
 
           <span class="bars">
@@ -73,7 +183,9 @@
             <i></i>
             <i></i>
           </span>
+
         </div>
+
 
         <div class="laptop">
 
@@ -89,11 +201,13 @@
 
         </div>
 
+
         <div class="book-stack">
           <span>ANALISIS</span>
           <span>BEBAN KERJA</span>
           <span>JABATAN</span>
         </div>
+
 
         <div class="sparkle sparkle-one">✦</div>
         <div class="sparkle sparkle-two">✧</div>
@@ -105,72 +219,302 @@
     </section>
 
 
-        
-<!-- AREA VIDEO -->
-<main class="content-panel" id="daftar-video">
 
-  <!-- SEARCH BAR TENGAH -->
-  <section class="search-section">
-
-    <label class="search-field">
-
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-
-        <circle
-          cx="10.8"
-          cy="10.8"
-          r="6.6">
-        </circle>
-
-        <path d="m16 16 5 5"></path>
-
-      </svg>
-
-      <input
-        type="search"
-        id="searchInput"
-        placeholder="Cari video berdasarkan nama jabatan..."
-        aria-label="Cari video"
-        autocomplete="off"
-      >
-
-    </label>
-
-  </section>
+    <!-- =========================
+         AREA VIDEO
+    ========================== -->
+    <main class="content-panel" id="daftar-video">
 
 
-  <!-- JUMLAH VIDEO -->
-  <p
-    class="video-counter"
-    id="videoCounter"
-    aria-live="polite">
-  </p>
+      <!-- SEARCH BAR -->
+      <section class="search-section">
+
+        <label class="search-field">
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+
+            <circle
+              cx="10.8"
+              cy="10.8"
+              r="6.6">
+            </circle>
+
+            <path d="m16 16 5 5"></path>
+
+          </svg>
+
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Cari video berdasarkan nama jabatan..."
+            aria-label="Cari video"
+            autocomplete="off"
+          >
+
+        </label>
+
+      </section>
 
 
-  <!-- DAFTAR KARTU VIDEO -->
-  <section
-    class="video-grid"
-    id="videoGrid"
-    aria-label="Kumpulan video">
-  </section>
+
+      <!-- HEADER SECTION VIDEO -->
+      <section class="section-heading">
+
+        <div class="section-title-group">
+
+          <div class="section-icon video-icon">
+            ▶
+          </div>
+
+          <div>
+
+            <h2>Video Pembelajaran</h2>
+
+            <p>
+              Pilih video sesuai jabatan untuk mempelajari
+              perhitungan Analisis Beban Kerja.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
 
 
-  <!-- JIKA VIDEO TIDAK DITEMUKAN -->
-  <p
-    class="empty-message"
-    id="emptyMessage"
-    hidden>
 
-    Video tidak ditemukan.
-    Silakan coba kata kunci lain.
-
-  </p>
-
-</main>
+      <!-- JUMLAH VIDEO -->
+      <p
+        class="video-counter"
+        id="videoCounter"
+        aria-live="polite">
+      </p>
 
 
-    <!-- FOOTER -->
-    <footer>
+
+      <!-- DAFTAR KARTU VIDEO -->
+      <section
+        class="video-grid"
+        id="videoGrid"
+        aria-label="Kumpulan video">
+      </section>
+
+
+
+      <!-- JIKA VIDEO TIDAK DITEMUKAN -->
+      <p
+        class="empty-message"
+        id="emptyMessage"
+        hidden>
+
+        Video tidak ditemukan.
+        Silakan coba kata kunci lain.
+
+      </p>
+
+    </main>
+
+
+
+    <!-- =========================
+         FLYER & INFOGRAFIS
+    ========================== -->
+    <section class="flyer-section" id="infografis">
+
+      <div class="section-heading flyer-heading">
+
+        <div class="section-title-group">
+
+          <div class="section-icon flyer-icon">
+            ▤
+          </div>
+
+          <div>
+
+            <h2>Flyer &amp; Infografis</h2>
+
+            <p>
+              Pelajari ringkasan materi Analisis Beban Kerja
+              dan Perhitungan Kebutuhan Formasi melalui
+              infografis berikut.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="view-all-button"
+          id="viewAllFlyers">
+
+          Lihat Semua Flyer
+          <span>→</span>
+
+        </button>
+
+      </div>
+
+
+
+      <!-- CAROUSEL -->
+      <div class="flyer-carousel-wrapper">
+
+
+        <!-- TOMBOL KIRI -->
+        <button
+          type="button"
+          class="carousel-button carousel-prev"
+          id="flyerPrev"
+          aria-label="Flyer sebelumnya">
+
+          ‹
+
+        </button>
+
+
+
+        <!-- LIST FLYER -->
+        <div class="flyer-carousel" id="flyerCarousel">
+
+
+          <article class="flyer-card">
+
+            <button
+              type="button"
+              class="flyer-preview"
+              data-image="assets/flyer/jf-asesor-sdma.jpg"
+              data-title="JF Asesor SDMA">
+
+              <img
+                src="assets/flyer/jf-asesor-sdma.jpg"
+                alt="Flyer JF Asesor SDMA"
+              >
+
+              <span class="preview-icon">
+                ◉
+              </span>
+
+            </button>
+
+            <h3>JF Asesor SDMA</h3>
+
+          </article>
+
+
+
+          <article class="flyer-card">
+
+            <button
+              type="button"
+              class="flyer-preview"
+              data-image="assets/flyer/pustakawan.jpg"
+              data-title="Pustakawan">
+
+              <img
+                src="assets/flyer/pustakawan.jpg"
+                alt="Flyer Pustakawan"
+              >
+
+              <span class="preview-icon">
+                ◉
+              </span>
+
+            </button>
+
+            <h3>Pustakawan</h3>
+
+          </article>
+
+
+
+          <article class="flyer-card">
+
+            <button
+              type="button"
+              class="flyer-preview"
+              data-image="assets/flyer/penata-laksana-barang.jpg"
+              data-title="JF Penata Laksana Barang">
+
+              <img
+                src="assets/flyer/penata-laksana-barang.jpg"
+                alt="Flyer JF Penata Laksana Barang"
+              >
+
+              <span class="preview-icon">
+                ◉
+              </span>
+
+            </button>
+
+            <h3>JF Penata Laksana Barang</h3>
+
+          </article>
+
+
+
+          <article class="flyer-card">
+
+            <button
+              type="button"
+              class="flyer-preview"
+              data-image="assets/flyer/pranata-humas.jpg"
+              data-title="Pranata Humas">
+
+              <img
+                src="assets/flyer/pranata-humas.jpg"
+                alt="Flyer Pranata Humas"
+              >
+
+              <span class="preview-icon">
+                ◉
+              </span>
+
+            </button>
+
+            <h3>Pranata Humas</h3>
+
+          </article>
+
+
+        </div>
+
+
+
+        <!-- TOMBOL KANAN -->
+        <button
+          type="button"
+          class="carousel-button carousel-next"
+          id="flyerNext"
+          aria-label="Flyer berikutnya">
+
+          ›
+
+        </button>
+
+      </div>
+
+
+
+      <!-- DOT CAROUSEL -->
+      <div class="carousel-dots" aria-hidden="true">
+
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer id="tentang">
 
       <strong>PROJECT VIDEO BPKP</strong>
 
@@ -184,7 +528,10 @@
   </div>
 
 
-  <!-- POPUP PEMUTAR VIDEO -->
+
+  <!-- =========================
+       POPUP VIDEO
+  ========================== -->
   <dialog
     class="video-modal"
     id="videoModal"
@@ -192,14 +539,18 @@
 
     <div class="modal-top">
 
-      <h2 id="modalTitle">Video</h2>
+      <h2 id="modalTitle">
+        Video
+      </h2>
 
       <button
         type="button"
         class="close-button"
         id="closeModal"
         aria-label="Tutup video">
+
         ×
+
       </button>
 
     </div>
@@ -210,6 +561,7 @@
       id="modalPlayer">
     </div>
 
+
     <p class="modal-note">
       Jika video tidak dapat diputar,
       periksa izin akses Google Drive.
@@ -217,5 +569,46 @@
 
   </dialog>
 
+
+
+  <!-- =========================
+       POPUP FLYER
+  ========================== -->
+  <dialog
+    class="flyer-modal"
+    id="flyerModal">
+
+    <div class="flyer-modal-top">
+
+      <h2 id="flyerModalTitle">
+        Flyer
+      </h2>
+
+      <button
+        type="button"
+        class="close-button"
+        id="closeFlyerModal"
+        aria-label="Tutup flyer">
+
+        ×
+
+      </button>
+
+    </div>
+
+
+    <div class="flyer-modal-content">
+
+      <img
+        id="flyerModalImage"
+        src=""
+        alt=""
+      >
+
+    </div>
+
+  </dialog>
+
 </body>
+
 </html>
